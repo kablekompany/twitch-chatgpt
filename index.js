@@ -46,7 +46,7 @@ if (!MODEL_NAME) {
     MODEL_NAME = "gpt-3.5-turbo"
 }
 if (!TWITCH_USER) {
-    TWITCH_USER = "oSetinhasBot"
+    TWITCH_USER = "KableKoBot"
     console.log("No TWITCH_USER found. Using oSetinhasBot as default.")
 }
 if (!TWITCH_AUTH) {
@@ -102,6 +102,7 @@ bot.onConnected((addr, port) => {
     channels.forEach(channel => {
         console.log(`* Joining ${channel}`);
         console.log(`* Saying hello in ${channel}`)
+        bot.say(channel, "ALRIGHT")
     });
 });
 
